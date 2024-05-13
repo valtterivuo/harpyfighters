@@ -13,11 +13,9 @@
         }
         body {
             display: flex;
-            flex-direction: column;
-            --form-height: 6rem;
-            --form-content-size: 2rem;
         }
 
+        body,
         canvas {
             background-color: black;
         }
@@ -30,58 +28,14 @@
         img {
             display: none;
         }
-
-        form {
-            display: flex;
-            flex-wrap: wrap;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-            gap: var(--form-content-size);
-            height: var(--form-height);
-        }
-
-        form * {
-            font-size: var(--form-content-size);
-        }
-        
-        input[type='checkbox']{
-            width: var(--form-content-size);
-            height: var(--form-content-size);
-        }
-
-        main {
-            display: flex;
-            height: calc(100% - var(--form-height));
-        }
-        
-        label {
-            color:black
-        }
     </style>
     <script type="module" src="./src/index.js"></script>
 </head>
 <body>
-    <form>
-        <div>
-            <input id="harpy" type="checkbox" name="fighter" value="Harpy"/>
-            <label for="harpy">P1</label>
-        </div>
-        <div>
-            <input id="bird" type="checkbox" name="fighter" value="Bird"/>
-            <label for="bird">P2</label> 
-        </div>
-        <select id="state-dropdown" name="state"></select>
-        <button type="submit">Transition!</button>
-    </form>
-    
-    <main>
-        <canvas width="1920" height="1080"></canvas>
-    </main>
-
+    <canvas width="1920" height="1080"></canvas>
     <img src="./images/background.png" alt="background"/>
+    <img src="./images/fonts.png" alt="fonts"/>
     <img src="./images/birdsheet.png" alt="bird"/>
     <img src="./images/harpysheet.png" alt="harpy"/>
-
 </body>
 </html>
